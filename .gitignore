@@ -1,0 +1,51 @@
+﻿# jvben · 剧本包
+
+私有仓库。剧本来源是第三方平台作品，仅自用，不外传。
+
+## 文件
+
+| 文件 | 来源 | 说明 |
+|---|---|---|
+| \qinche.md\ | 恋与深空同人 · 作者 吗喽716 | 规则 50 条 + 13 个折叠面板 + 原始 HTML 开场 |
+
+## 格式
+
+\\\markdown
+---
+id: qinche
+name: 秦彻
+character: 秦彻
+user: 你
+mode: html
+---
+
+（persona：规则 + 输出格式要求）
+
+\\\opening
+（原始 HTML 首屏，18KB）
+\\\
+\\\
+
+## 装到手机
+
+放到 \~/.dsh/dsh-diy-ui/presets/\ 下，然后写 \ctive.json\：
+
+\\\json
+{"id": "qinche"}
+\\\
+
+## 提示
+
+仓库是私有的，\aw.githubusercontent.com\ 拉不到，必须走 API + token：
+
+\\\ash
+curl -H "Authorization: Bearer <token>" \\
+     -H "Accept: application/vnd.github.raw" \\
+     https://api.github.com/repos/zwg1097551433/jvben/contents/qinche.md
+\\\
+"@ | Set-Content "C:\gh\jvben\README.md" -Encoding UTF8
+
+@"
+node_modules/
+*.log
+*.bak*
